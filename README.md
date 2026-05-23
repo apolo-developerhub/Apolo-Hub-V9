@@ -1,21 +1,21 @@
-# 🚀 APOLO HUB ACESSO KEY - V9 (ELITE SECURE)
+# 🚀 APOLO HUB ACESSO KEY - V9 (CRONOS EDITION)
 
-Esta é a versão definitiva: **Super Segura, Blindada e Otimizada**.
+Versão definitiva com **Expiração Automática de 24 Horas** para chaves Free.
 
 ## 🛠️ Como Executar
 
 Copie e cole o comando abaixo no seu executor:
 
 ```lua
--- APOLO HUB V9 - OFFICIAL LOADSTRING (V4 ELITE)
-loadstring(game:HttpGet("https://files.manuscdn.com/user_upload_by_module/session_file/310519663689665619/hMTmieEUjRtoqgja.lua"))()
+-- APOLO HUB V9 - OFFICIAL LOADSTRING (V9 CRONOS)
+loadstring(game:HttpGet("https://files.manuscdn.com/user_upload_by_module/session_file/310519663689665619/uAJOSqFxKPhfoBMe.lua"))()
 ```
 
-## 🔒 Proteções da Versão V4
-- **Blindagem Anti-Dump**: Código criptografado para impedir cópias.
-- **Título Oficial**: APOLO HUB ACESSO KEY.
-- **Performance**: Carregamento instantâneo sem travamentos.
-- **Validação Segura**: Sistema de chaves robusto.
+## 🔒 Novidades da Versão V9
+- **Expiração Real**: Chaves Free agora expiram automaticamente após 24 horas de uso.
+- **Segurança Híbrida**: Proteção contra cópias e travas de loader.
+- **Título Atualizado**: APOLO HUB ACESSO KEY.
+- **Performance**: Carregamento leve e compatível com todos os aparelhos.
 
 ---
-*Versão 4.0 - Segurança de Elite.*
+*Versão 5.0 - Controle Total de Acesso.*
