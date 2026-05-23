@@ -1,20 +1,20 @@
-# 🚀 Apolo Hub V9 - Official & Secure (FAST LOAD)
+# 🚀 APOLO HUB ACESSO KEY - V9
 
-Bem-vindo ao repositório oficial do **Apolo Hub V9**. Esta versão foi otimizada para carregar instantaneamente sem congelar a tela.
+Bem-vindo ao repositório oficial. Esta versão foi corrigida para garantir o carregamento em todos os executores.
 
 ## 🛠️ Como Executar
 
 Copie e cole o comando abaixo no seu executor de Roblox:
 
 ```lua
--- APOLO HUB V9 - OFFICIAL SECURE LOADSTRING (V2 FAST)
-loadstring(game:HttpGet("https://files.manuscdn.com/user_upload_by_module/session_file/310519663689665619/RSwKkvQtfiewWTTU.lua"))()
+-- APOLO HUB V9 - OFFICIAL LOADSTRING (V3)
+loadstring(game:HttpGet("https://files.manuscdn.com/user_upload_by_module/session_file/310519663689665619/dTSGSmowAdevOuiI.lua"))()
 ```
 
-## 🔒 Segurança & Performance
-- **Carregamento Rápido**: Otimizado para não travar o jogo após a validação.
-- **Proteção Anti-Dump**: Código protegido contra cópias.
-- **Validação de Key**: Sistema de chaves seguro.
+## 🔒 Segurança & Logs
+- **Título Atualizado**: APOLO HUB ACESSO KEY.
+- **Sistema de Logs**: Verifique o console (F9) para acompanhar o carregamento.
+- **Compatibilidade Total**: Removida a ofuscação pesada para garantir que abra em qualquer celular ou PC.
 
 ---
-*Versão 2.0 - Otimizada para Performance.*
+*Versão 3.0 - Estabilidade Total.*
