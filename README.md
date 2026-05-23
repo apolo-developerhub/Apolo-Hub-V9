@@ -1,20 +1,21 @@
-# 🚀 APOLO HUB ACESSO KEY - V9
+# 🚀 APOLO HUB ACESSO KEY - V9 (ELITE SECURE)
 
-Bem-vindo ao repositório oficial. Esta versão foi corrigida para garantir o carregamento em todos os executores.
+Esta é a versão definitiva: **Super Segura, Blindada e Otimizada**.
 
 ## 🛠️ Como Executar
 
-Copie e cole o comando abaixo no seu executor de Roblox:
+Copie e cole o comando abaixo no seu executor:
 
 ```lua
--- APOLO HUB V9 - OFFICIAL LOADSTRING (V3)
-loadstring(game:HttpGet("https://files.manuscdn.com/user_upload_by_module/session_file/310519663689665619/dTSGSmowAdevOuiI.lua"))()
+-- APOLO HUB V9 - OFFICIAL LOADSTRING (V4 ELITE)
+loadstring(game:HttpGet("https://files.manuscdn.com/user_upload_by_module/session_file/310519663689665619/hMTmieEUjRtoqgja.lua"))()
 ```
 
-## 🔒 Segurança & Logs
-- **Título Atualizado**: APOLO HUB ACESSO KEY.
-- **Sistema de Logs**: Verifique o console (F9) para acompanhar o carregamento.
-- **Compatibilidade Total**: Removida a ofuscação pesada para garantir que abra em qualquer celular ou PC.
+## 🔒 Proteções da Versão V4
+- **Blindagem Anti-Dump**: Código criptografado para impedir cópias.
+- **Título Oficial**: APOLO HUB ACESSO KEY.
+- **Performance**: Carregamento instantâneo sem travamentos.
+- **Validação Segura**: Sistema de chaves robusto.
 
 ---
-*Versão 3.0 - Estabilidade Total.*
+*Versão 4.0 - Segurança de Elite.*
