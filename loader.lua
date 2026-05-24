@@ -74,7 +74,7 @@ local function _init()
             sg:Destroy()
             
             -- CARREGA O HUB V9 (A versão sem Key interna)
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/apolo-developerhub/apolo-hub-script/master/hub_v9.lua"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/apolo-developerhub/Apolo-Hub-V9/master/hub_v9.lua"))()
         else
             btn.Text = "❌ INVÁLIDA"
             btn.BackgroundColor3 = Color3.new(0.7, 0, 0)
