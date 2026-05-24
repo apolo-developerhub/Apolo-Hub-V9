@@ -27,10 +27,13 @@ local function _init()
 
     local box = Instance.new("TextBox", main)
     box.Size = UDim2.new(0.8, 0, 0, 40)
-    box.Position = UDim2.new(0.1, 0, 0.35, 0)
+    box.Position = UDim2.new(0.1, 0, 0.45, 0)
     box.PlaceholderText = "COLE SUA KEY"
+    box.Text = ""
     box.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     box.TextColor3 = Color3.new(1, 1, 1)
+    box.Font = Enum.Font.Gotham
+    box.TextSize = 16
     Instance.new("UICorner", box)
 
     local btn = Instance.new("TextButton", main)
