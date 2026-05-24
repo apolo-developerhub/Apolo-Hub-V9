@@ -56,6 +56,7 @@ local function _init()
             btn.Text = "✅ LIBERADO"
             btn.BackgroundColor3 = Color3.fromRGB(50, 200, 50)
             print("[APOLO] Key válida! Baixando Hub...")
+            game.StarterGui:SetCore("ChatMakeSystemMessage", {Text = "[APOLO] Key Válida! Baixando Hub...", Color = Color3.new(0, 1, 0)})
             
             task.wait(0.5)
             sg:Destroy()
@@ -76,6 +77,7 @@ local function _init()
                 end
             else
                 warn("[APOLO ERROR] Falha ao baixar o Hub do GitHub!")
+                game.StarterGui:SetCore("ChatMakeSystemMessage", {Text = "[APOLO] ERRO: Falha ao baixar o Hub!", Color = Color3.new(1, 0, 0)})
             end
         else
             btn.Text = "❌ INVÁLIDA"
