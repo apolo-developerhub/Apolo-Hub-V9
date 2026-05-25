@@ -1617,7 +1617,11 @@ buildPage("Config", function()
         local r, g, b = math.random(0, 255), math.random(0, 255), math.random(0, 255)
         local newColor = Color3.fromRGB(r, g, b)
         colorBtn.BackgroundColor3 = newColor
-        if gui then gui.BackgroundColor3 = newColor end
+        
+        -- FIXED: Update the actual panel background elements
+        if mainOuter then mainOuter.BackgroundColor3 = newColor end
+        if bgOverlay then bgOverlay.BackgroundColor3 = newColor end
+        
         colorBtn.Text = "🎨  RGB(" .. r .. "," .. g .. "," .. b .. ")"
         task.delay(1.5, function() if colorBtn and colorBtn.Parent then colorBtn.Text = "🎨  Random Panel Color" end end)
     end)
