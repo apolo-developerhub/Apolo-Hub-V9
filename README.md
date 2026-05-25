@@ -1,21 +1,21 @@
-# 🚀 APOLO HUB - V21 LOCAL VALIDATION
+# 🚀 APOLO HUB - V22 ULTRA FINAL
 
-Versão definitiva com **Validação Local Independente**, **Banco de Dados de Chaves** e **Textos em Maiúsculo Garantido**.
+Versão **DEFINITIVA** com **Validação Local 100% Segura**, **Chaves Expiradas Bloqueadas** e **Textos em MAIÚSCULO Garantido**.
 
 ## 🛠️ Como Executar
 
 Copie e cole o comando abaixo no seu executor:
 
 ```lua
--- APOLO HUB V21 - OFFICIAL LOADSTRING (LOCAL VALIDATION)
-loadstring(game:HttpGet("https://files.manuscdn.com/user_upload_by_module/session_file/310519663689665619/BPbHeKyMduIkzqlK.lua"))()
+-- APOLO HUB V22 - OFFICIAL LOADSTRING (ULTRA FINAL EDITION)
+loadstring(game:HttpGet("https://files.manuscdn.com/user_upload_by_module/session_file/310519663689665619/KROaoVuMVRwsUHun.lua"))()
 ```
 
-## 🔒 Novidades da Versão V21
-- **Validação Local 100% Segura**: Não depende do servidor externo. Chaves expiradas são bloqueadas instantaneamente.
-- **Banco de Dados Integrado**: Todas as chaves e datas de expiração estão dentro do script.
-- **Textos em Maiúsculo**: SPEED e PING garantidamente em letras maiúsculas.
-- **Segurança Máxima**: Impossível burlar com chaves aleatórias ou expiradas.
+## 🔒 Novidades da Versão V22
+- **Validação Local 100% Segura**: Banco de dados integrado. Chaves expiradas são bloqueadas instantaneamente.
+- **Textos em MAIÚSCULO Garantido**: FPS, SPEED e PING aparecem 100% em letras maiúsculas.
+- **Impossível Burlar**: Sem dependência de servidor externo. Validação acontece localmente.
+- **Performance Máxima**: Carregamento instantâneo após validação.
 
 ---
-*Versão 21.0 - Validação Local Definitiva.*
+*Versão 22.0 - A Versão FINAL e DEFINITIVA.*
