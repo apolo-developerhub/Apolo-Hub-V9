@@ -35,7 +35,7 @@ local State = {
     batAimbotToggled = false, autoSwingEnabled = false,
     hittingCooldown = false,
     batCounterEnabled = false, batCounterDebounce = false,
-    batAimbotSpeed = 52,
+    batAimbotSpeed = 52, -- FIXED: Default speed set to 52
     dropEnabled = false, _tpInProgress = false,
     lastMoveDir = Vector3.new(0, 0, 0),
     stackButtonsHidden = false,
@@ -946,6 +946,7 @@ local function makeInputRow(label, default, onChange)
     lbl.Size = UDim2.new(1, -100, 1, 0)
     lbl.Position = UDim2.new(0, 14, 0, 0)
     lbl.BackgroundTransparency = 1
+    lbl.ZIndex = 10 -- FIXED: Ensure label is visible
     lbl.Text = label
     lbl.TextColor3 = C.rowLabel
     lbl.Font = Enum.Font.GothamBold
@@ -999,6 +1000,7 @@ local function makeToggleRow(label, defaultOn, onToggle)
     lbl.Size = UDim2.new(1, -70, 1, 0)
     lbl.Position = UDim2.new(0, 14, 0, 0)
     lbl.BackgroundTransparency = 1
+    lbl.ZIndex = 10 -- FIXED: Ensure label is visible
     lbl.Text = label
     lbl.TextColor3 = C.rowLabel
     lbl.Font = Enum.Font.GothamBold
@@ -1271,6 +1273,9 @@ buildPage("Speed", function()
     laggerBox = makeInputRow("Lagger Speed", State.laggerSpeed, function(n)
         if n > 0 and n <= 500 then State.laggerSpeed = n end
     end)
+    batSpeedBox = makeInputRow("Auto Bat Speed", State.batAimbotSpeed, function(n)
+        if n > 0 and n <= 500 then State.batAimbotSpeed = n end
+    end)
 
     makeGap(6)
 
@@ -1423,7 +1428,7 @@ buildPage("Visual", function()
     makeGap(2)
 
     
-    makeToggleRow("unwalk", State.unwalkEnabled, function(on)
+    makeToggleRow("Unwalk", State.unwalkEnabled, function(on)
         State.unwalkEnabled = on
         local char = game.Players.LocalPlayer.Character
         if char and char:FindFirstChild("Animate") then
@@ -1583,6 +1588,38 @@ buildPage("Config", function()
         sizeDownBtn.Text = "➖  Size: " .. string.format("%.1fx", State.stackButtonScale)
         task.delay(1, function() if sizeDownBtn and sizeDownBtn.Parent then sizeDownBtn.Text = "➖  Btn Size -" end end)
         pcall(saveConfig)
+    end)
+
+    makeGap(8)
+    makeSectionHeader("Panel Color")
+    makeGap(2)
+
+    local colorWrap = Instance.new("Frame", currentPage)
+    colorWrap.Size = UDim2.new(1, 0, 0, 46)
+    colorWrap.BackgroundTransparency = 1
+    colorWrap.BorderSizePixel = 0
+    colorWrap.LayoutOrder = LO()
+    local colorBtn = Instance.new("TextButton", colorWrap)
+    colorBtn.Size = UDim2.new(1, -28, 0, 32)
+    colorBtn.Position = UDim2.new(0, 14, 0, 7)
+    colorBtn.BackgroundColor3 = Color3.fromRGB(140, 0, 255)
+    colorBtn.BorderSizePixel = 0
+    colorBtn.Text = "🎨  Random Panel Color"
+    colorBtn.TextColor3 = C.btnTxt
+    colorBtn.Font = Enum.Font.GothamBold
+    colorBtn.TextSize = 12
+    colorBtn.ZIndex = 5
+    mkCorner(colorBtn, 6)
+    mkStroke(colorBtn, C.btnBorder, 1)
+    colorBtn.MouseEnter:Connect(function() TweenService:Create(colorBtn, TweenInfo.new(0.1), { BackgroundColor3 = Color3.fromRGB(180, 50, 255) }):Play() end)
+    colorBtn.MouseLeave:Connect(function() TweenService:Create(colorBtn, TweenInfo.new(0.1), { BackgroundColor3 = Color3.fromRGB(140, 0, 255) }):Play() end)
+    colorBtn.MouseButton1Click:Connect(function()
+        local r, g, b = math.random(0, 255), math.random(0, 255), math.random(0, 255)
+        local newColor = Color3.fromRGB(r, g, b)
+        colorBtn.BackgroundColor3 = newColor
+        if gui then gui.BackgroundColor3 = newColor end
+        colorBtn.Text = "🎨  RGB(" .. r .. "," .. g .. "," .. b .. ")"
+        task.delay(1.5, function() if colorBtn and colorBtn.Parent then colorBtn.Text = "🎨  Random Panel Color" end end)
     end)
 
     makeGap(8)
@@ -2538,90 +2575,9 @@ end
 -- ============================================================
 local function setupChar(char)
     task.wait(0.1)
-    local h = char:WaitForChild("Humanoid", 5)
-    local hrp = char:WaitForChild("HumanoidRootPart", 5)
+    h = char:WaitForChild("Humanoid", 5)
+    hrp = char:WaitForChild("HumanoidRootPart", 5)
     if not h or not hrp then return end
-
-    local head = char:FindFirstChild("Head")
-    if head then
-        local oldBB = head:FindFirstChild("ApoloHubBB")
-        if oldBB then oldBB:Destroy() end
-        local bb = Instance.new("BillboardGui", head)
-        bb.Name = "ApoloHubBB"
-        bb.Size = UDim2.new(0, 200, 0, 60)
-        bb.StudsOffset = Vector3.new(0, 3.5, 0)
-        bb.AlwaysOnTop = true
-        
-        -- Line 1: FPS + Speed
-        local speedBillLbl = Instance.new("TextLabel", bb)
-        speedBillLbl.Name = "SpeedBillLbl"
-        speedBillLbl.Size = UDim2.new(1, 0, 0, 25)
-        speedBillLbl.Position = UDim2.new(0, 0, 0, 0)
-        speedBillLbl.BackgroundTransparency = 1
-        speedBillLbl.Text = "FPS: 0 | Speed: 0.0"
-        speedBillLbl.TextColor3 = Color3.fromRGB(180, 60, 255)
-        speedBillLbl.Font = Enum.Font.GothamBlack
-        speedBillLbl.TextScaled = true
-        speedBillLbl.TextStrokeTransparency = 0.1
-        speedBillLbl.TextStrokeColor3 = Color3.new(0, 0, 0)
-
-        -- Line 2: APOLO HUB ON TOP
-        local hubLbl = Instance.new("TextLabel", bb)
-        hubLbl.Name = "HubLbl"
-        hubLbl.Size = UDim2.new(1, 0, 0, 20)
-        hubLbl.Position = UDim2.new(0, 0, 0, 28)
-        hubLbl.BackgroundTransparency = 1
-        hubLbl.Text = "APOLO HUB ON TOP"
-        hubLbl.TextColor3 = Color3.fromRGB(140, 80, 255)
-        hubLbl.Font = Enum.Font.GothamBlack
-        hubLbl.TextScaled = true
-        hubLbl.TextStrokeTransparency = 0
-        hubLbl.TextStrokeColor3 = Color3.new(0, 0, 0)
-    end
-
-    if State.antiRagdollEnabled then
-        stopAntiRagdoll()
-        task.wait(0.5)
-        startAntiRagdoll()
-    end
-    if State.medusaCounterEnabled then setupMedusaCounter(char) end
-    if State.batAimbotToggled then stopBatAimbot(); task.wait(0.2); pcall(startBatAimbot) end
-    if State.batCounterEnabled then task.wait(0.3); startBatCounter() end
-    if State.autoMedusaEnabled then stopAutoMedusa(); task.wait(0.2); startAutoMedusa() end
-end
-
-    local head = char:FindFirstChild("Head")
-    if head then
-        local oldBB = head:FindFirstChild("ApoloHubBB")
-        if oldBB then oldBB:Destroy() end
-        local bb = Instance.new("BillboardGui", head)
-        bb.Name = "ApoloHubBB"
-        bb.Size = UDim2.new(0, 200, 0, 40)
-        bb.StudsOffset = Vector3.new(0, 3, 0)
-        bb.AlwaysOnTop = true
-        
-        local hubLbl = Instance.new("TextLabel", bb)
-        hubLbl.Name = "HubLbl"
-        hubLbl.Size = UDim2.new(1, 0, 1, 0)
-        hubLbl.BackgroundTransparency = 1
-        hubLbl.Text = "APOLO HUB ON TOP"
-        hubLbl.TextColor3 = Color3.fromRGB(140, 80, 255)
-        hubLbl.Font = Enum.Font.GothamBlack
-        hubLbl.TextScaled = true
-        hubLbl.TextStrokeTransparency = 0
-        hubLbl.TextStrokeColor3 = Color3.new(0, 0, 0)
-    end
-
-    if State.antiRagdollEnabled then
-        stopAntiRagdoll()
-        task.wait(0.5)
-        startAntiRagdoll()
-    end
-    if State.medusaCounterEnabled then setupMedusaCounter(char) end
-    if State.batAimbotToggled then stopBatAimbot(); task.wait(0.2); pcall(startBatAimbot) end
-    if State.batCounterEnabled then task.wait(0.3); startBatCounter() end
-    if State.autoMedusaEnabled then stopAutoMedusa(); task.wait(0.2); startAutoMedusa() end
-end
 
     local head = char:FindFirstChild("Head")
     if head then
