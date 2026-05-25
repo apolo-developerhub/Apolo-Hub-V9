@@ -65,12 +65,25 @@ local function _init()
             sg:Destroy()
             
             -- Download do Hub original
-            local hubContent = game:HttpGet("https://raw.githubusercontent.com/apolo-developerhub/Apolo-Hub-V9/master/hub_v9.lua")
-            local func, err = loadstring(hubContent)
-            if func then
-                func()
+            print("[APOLO] Baixando Hub...")
+            local success, hubContent = pcall(function() 
+                return game:HttpGet("https://raw.githubusercontent.com/apolo-developerhub/Apolo-Hub-V9/master/hub_v9.lua") 
+            end)
+            
+            if success and hubContent then
+                print("[APOLO] Hub baixado, compilando...")
+                local func, err = loadstring(hubContent)
+                if func then
+                    print("[APOLO] Executando Hub...")
+                    local runSuccess, runErr = pcall(func)
+                    if not runSuccess then
+                        warn("[APOLO] Erro na execucao: " .. tostring(runErr))
+                    end
+                else
+                    warn("[APOLO] Erro na compilacao: " .. tostring(err))
+                end
             else
-                warn("Erro ao carregar Hub: " .. tostring(err))
+                warn("[APOLO] Falha ao baixar o Hub!")
             end
         else
             btn.Text = "ERRO!"
