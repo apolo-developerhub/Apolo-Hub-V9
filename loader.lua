@@ -11,7 +11,17 @@ local success, err = pcall(function()
     })
 end)
 
-local function _init()
+    local function _notify(msg)
+        pcall(function()
+            game.StarterGui:SetCore("SendNotification", {
+                Title = "APOLO HUB",
+                Text = msg,
+                Duration = 5
+            })
+        end)
+    end
+
+    local function _init()
     local player = game.Players.LocalPlayer
     local sg = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
     sg.Name = "ApoloFinal"
@@ -64,26 +74,26 @@ local function _init()
             task.wait(0.5)
             sg:Destroy()
             
-            -- Download do Hub original
-            print("[APOLO] Baixando Hub...")
-            local success, hubContent = pcall(function() 
-                return game:HttpGet("https://raw.githubusercontent.com/apolo-developerhub/Apolo-Hub-V9/master/hub_v9.lua") 
+            _notify("Baixando Hub... Aguarde!")
+            
+            local hubContent
+            local dlSuccess = pcall(function() 
+                hubContent = game:HttpGet("https://raw.githubusercontent.com/apolo-developerhub/Apolo-Hub-V9/master/hub_v9.lua?t=" .. tick()) 
             end)
             
-            if success and hubContent then
-                print("[APOLO] Hub baixado, compilando...")
+            if dlSuccess and hubContent then
+                _notify("Hub baixado! Iniciando...")
                 local func, err = loadstring(hubContent)
                 if func then
-                    print("[APOLO] Executando Hub...")
                     local runSuccess, runErr = pcall(func)
                     if not runSuccess then
-                        warn("[APOLO] Erro na execucao: " .. tostring(runErr))
+                        _notify("Erro na execucao: " .. tostring(runErr))
                     end
                 else
-                    warn("[APOLO] Erro na compilacao: " .. tostring(err))
+                    _notify("Erro na compilacao: " .. tostring(err))
                 end
             else
-                warn("[APOLO] Falha ao baixar o Hub!")
+                _notify("Falha ao baixar o Hub! Verifique sua internet.")
             end
         else
             btn.Text = "ERRO!"
