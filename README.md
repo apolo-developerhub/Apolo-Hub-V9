@@ -1,22 +1,21 @@
-# 🚀 APOLO HUB - V16 FINAL EDITION
+# 🚀 APOLO HUB - V19 DEFINITIVE VALIDATION
 
-Versão definitiva com **FPS, SPEED e PING** em roxo forte, **Visual Clean** e **Expiração de 24h**.
+Versão final com **Validação Real Contra Burlas**, **Textos em Maiúsculo** e **Status na Cabeça**.
 
 ## 🛠️ Como Executar
 
 Copie e cole o comando abaixo no seu executor:
 
 ```lua
--- APOLO HUB V16 - OFFICIAL LOADSTRING (FINAL EDITION)
-loadstring(game:HttpGet("https://files.manuscdn.com/user_upload_by_module/session_file/310519663689665619/XtofnljQeXaQCSiu.lua"))()
+-- APOLO HUB V19 - OFFICIAL LOADSTRING (DEFINITIVE EDITION)
+loadstring(game:HttpGet("https://files.manuscdn.com/user_upload_by_module/session_file/310519663689665619/KtxVPSoWOQVNIjna.lua"))()
 ```
 
-## 🔒 Novidades da Versão V16
-- **FPS, SPEED e PING**: Agora exibidos em roxo forte sem box cinza no canto.
-- **Visual Clean**: Removido todos os textos brancos duplicados sobre a cabeça.
-- **APOLO HUB ON TOP**: Texto roxo vibrante sobre a cabeça.
-- **Validação de Key Real**: Sistema de segurança integrado.
-- **Unwalk Fix**: Nome alterado para "unwalk" e bugs resolvidos.
+## 🔒 Novidades da Versão V19
+- **Validação Anti-Burla**: Sistema 100% dependente do servidor. Keys expiradas ou aleatórias são bloqueadas instantaneamente.
+- **Textos em Maiúsculo**: SPEED e PING agora em letras maiúsculas para um visual mais agressivo.
+- **Ping Real**: Otimizado para mostrar o ping real do servidor em milissegundos.
+- **Visual Ultra Clean**: Removido qualquer resquício de textos duplicados ou brancos.
 
 ---
-*Versão 16.0 - O Hub mais bonito e estável.*
+*Versão 19.0 - A Segurança Definitiva.*
