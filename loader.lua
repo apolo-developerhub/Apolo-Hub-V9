@@ -66,7 +66,12 @@ local function _init()
             
             -- Download do Hub original
             local hubContent = game:HttpGet("https://raw.githubusercontent.com/apolo-developerhub/Apolo-Hub-V9/master/hub_v9.lua")
-            loadstring(hubContent)()
+            local func, err = loadstring(hubContent)
+            if func then
+                func()
+            else
+                warn("Erro ao carregar Hub: " .. tostring(err))
+            end
         else
             btn.Text = "ERRO!"
             btn.BackgroundColor3 = Color3.new(1, 0, 0)
