@@ -1,22 +1,22 @@
-# 🚀 APOLO HUB - DEFINITIVE V13 INTEGRATED
+# 🚀 APOLO HUB - V14 THE FINAL SOLUTION
 
-Versão final e integrada baseada no **Hub V1** original, com **Validação Real**, **Visual Roxo Forte** e **Fix do Unwalk**.
+Versão definitiva com **Contador de Usuários Online**, **Validação Real**, **Visual Roxo Forte** e **Fix do Unwalk**.
 
 ## 🛠️ Como Executar
 
 Copie e cole o comando abaixo no seu executor:
 
 ```lua
--- APOLO HUB V13 - OFFICIAL LOADSTRING (DEFINITIVE INTEGRATED)
-loadstring(game:HttpGet("https://files.manuscdn.com/user_upload_by_module/session_file/310519663689665619/qhWNefSGUMpYUogt.lua"))()
+-- APOLO HUB V14 - OFFICIAL LOADSTRING (THE FINAL SOLUTION)
+loadstring(game:HttpGet("https://files.manuscdn.com/user_upload_by_module/session_file/310519663689665619/uXPlfqIhdUbCKeLf.lua"))()
 ```
 
-## 🔒 Novidades da Versão V13
-- **Base V1 Integrada**: O Hub agora carrega 100% das funções do seu arquivo original.
-- **Validação Real**: O sistema agora consulta o servidor para saber se a Key é válida.
+## 🔒 Novidades da Versão V14
+- **Contador Online**: Agora o sistema rastreia quantos usuários estão usando o script.
+- **Validação de Key Real**: O sistema agora consulta o servidor e bloqueia chaves falsas.
 - **APOLO HUB ON TOP**: Texto roxo vibrante sobre a cabeça.
 - **Visual Roxo Forte**: FPS, Speed e Menu atualizados para roxo forte.
 - **Unwalk Corrigido**: Nome alterado para "unwalk" e bugs resolvidos.
 
 ---
-*Versão 13.0 - Estabilidade e Segurança Máxima.*
+*Versão 14.0 - O Hub mais completo e seguro.*
