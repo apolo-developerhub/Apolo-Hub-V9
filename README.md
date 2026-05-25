@@ -1,22 +1,21 @@
-# 🚀 APOLO HUB - V16 FINAL EDITION
+# 🚀 APOLO HUB - V18 ULTRA CLEAN & SECURE
 
-Versão definitiva com **FPS, SPEED e PING** em roxo forte, **Visual Clean** e **Expiração de 24h**.
+Versão definitiva com **Validação Blindada**, **Limpeza Total de Textos Duplicados** e **Proteção Máxima**.
 
 ## 🛠️ Como Executar
 
 Copie e cole o comando abaixo no seu executor:
 
 ```lua
--- APOLO HUB V16 - OFFICIAL LOADSTRING (FINAL EDITION)
-loadstring(game:HttpGet("https://files.manuscdn.com/user_upload_by_module/session_file/310519663689665619/XtofnljQeXaQCSiu.lua"))()
+-- APOLO HUB V18 - OFFICIAL LOADSTRING (ULTRA EDITION)
+loadstring(game:HttpGet("https://files.manuscdn.com/user_upload_by_module/session_file/310519663689665619/LUxEZWZLfQMFTHJa.lua"))()
 ```
 
-## 🔒 Novidades da Versão V16
-- **FPS, SPEED e PING**: Agora exibidos em roxo forte sem box cinza no canto.
-- **Visual Clean**: Removido todos os textos brancos duplicados sobre a cabeça.
-- **APOLO HUB ON TOP**: Texto roxo vibrante sobre a cabeça.
-- **Validação de Key Real**: Sistema de segurança integrado.
-- **Unwalk Fix**: Nome alterado para "unwalk" e bugs resolvidos.
+## 🔒 Novidades da Versão V18
+- **Validação Blindada**: Corrigido o erro que aceitava chaves aleatórias. Agora o sistema é rigoroso.
+- **Limpeza Total**: Removido todos os textos brancos e duplicados da cabeça.
+- **APOLO HUB ON TOP**: Texto roxo vibrante com FPS, Speed e Ping integrados em um único lugar.
+- **Painel Profissional**: Campo de Key limpo e sem textos indesejados.
 
 ---
-*Versão 16.0 - O Hub mais bonito e estável.*
+*Versão 18.0 - Segurança e Estabilidade de Elite.*
