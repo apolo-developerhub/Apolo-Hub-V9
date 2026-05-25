@@ -1,14 +1,14 @@
-# 🚀 APOLO HUB - V23 FINAL DEFINITIVO
+# 🚀 APOLO HUB - V24 COM KEY PERMANENTE
 
-Versão **FINAL E DEFINITIVA** com **Validação Rigorosa**, **Chaves Expiradas Bloqueadas 100%** e **Segurança Total Anti-Roubo**.
+Versão **FINAL** com **Key Permanente** adicionada ao banco de dados.
 
 ## 🛠️ Como Executar
 
 Copie e cole o comando abaixo no seu executor:
 
 ```lua
--- APOLO HUB V23 - OFFICIAL LOADSTRING (FINAL DEFINITIVO)
-loadstring(game:HttpGet("https://files.manuscdn.com/user_upload_by_module/session_file/310519663689665619/HlXfKEfeBPsZAlTQ.lua"))()
+-- APOLO HUB V24 - OFFICIAL LOADSTRING (COM KEY PERMANENTE)
+loadstring(game:HttpGet("https://files.manuscdn.com/user_upload_by_module/session_file/310519663689665619/bKlUxzQidaWGhnAE.lua"))()
 ```
 
 ## 🔒 Recursos de Segurança
@@ -21,6 +21,7 @@ loadstring(game:HttpGet("https://files.manuscdn.com/user_upload_by_module/sessio
 ## 📋 Chaves Válidas Atuais
 - `APOLO-PRO-2024` (Chave mestre - nunca expira)
 - `XK9A9R0HD78NV0SB` (Válida até 25/05/2027)
+- `YXYON25VMTMXM95R` (PERMANENTE - nunca expira)
 
 ---
-*Versão 23.0 - A Versão FINAL, DEFINITIVA e SEGURA.*
+*Versão 24.0 - Com Key Permanente Integrada.*
